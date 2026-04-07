@@ -12,6 +12,9 @@ func main() {
 
 	printMap()
 	fmt.Println()
+
+	ex()
+	fmt.Println()
 }
 
 func printArray() {
@@ -115,4 +118,30 @@ func printMap() {
 	if el, ok := elements["Li"]; ok {
 		fmt.Println(el["name"], el["state"])
 	}
+}
+
+// 연습 문제
+func ex() {
+
+	//x := [6]string{"a","b","c","d","e","f"}의 x[2:5] 찾기
+	x := [6]string{"a", "b", "c", "d", "e", "f"}
+	fmt.Println(x[2:5])
+
+	//다음 리스트에서 가장 작은 숫자를 찾는 프로그램을 작성
+	k := []int{
+		48, 96, 86, 68,
+		57, 82, 63, 70,
+		37, 34, 83, 27,
+		19, 97, 9, 17,
+	}
+
+	small := k[0]
+	// 두 번째 값부터 끝까지 확인하면서 더 작은 값이 나오면 갱신
+	for _, value := range k[1:] {
+		if value < small {
+			small = value
+		}
+	}
+
+	fmt.Println(small)
 }
