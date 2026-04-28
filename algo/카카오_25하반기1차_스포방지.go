@@ -1,6 +1,6 @@
 package algo
 
-func solution(message string, spoiler_ranges [][]int) int {
+func solution1000(message string, spoiler_ranges [][]int) int {
 	type Word struct {
 		start int
 		end   int
